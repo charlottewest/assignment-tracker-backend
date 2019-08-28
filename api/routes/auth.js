@@ -20,9 +20,7 @@ router.get('/profile', async (req, res, next) => {
 
 router.post('/login', async (req, res, next) => {
   const { email, password } = req.body
-  console.log('EMAIL', email)
   const user = await User.findOne({ email })
-  console.log("USER", user)
   if (user) {
     const valid = await bcrypt.compare(password, user.password)
     if (valid) {

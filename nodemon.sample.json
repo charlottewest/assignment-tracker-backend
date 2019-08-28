@@ -1,7 +1,7 @@
 {
   "env": {
     "CLIENT_BASE_URL": "http://localhost:3000",
-    "MONGO_DB_CONNECTION": "mongodb+srv://charlottewest10:Yw25Rl3A1rmx@general-purpose-3cxqr.mongodb.net/journal_dev?retryWrites=true&w=majority",
+    "MONGO_DB_CONNECTION": "mongodb+srv://charlottewest10:Yw25Rl3A1rmx@general-purpose-3cxqr.mongodb.net/assignment_tracker_dev?retryWrites=true&w=majority",
     "NODE_ENV": "development",
     "PORT": 5000,
     "SECRET_KEY": "MYSECRETPASSCODE"

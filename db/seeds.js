@@ -15,12 +15,20 @@ const reset = async () => {
       email: 'student.user@test.com',
       password: bcrypt.hashSync('password', 10),
       admin: false,
-      posts: [
+      assignments: [
         {
           title: 'title 1',
           link: 'https://www.google.com',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida tincidunt tellus, vel vehicula turpis euismod a. Nulla lobortis mi nec sagittis hendrerit. Sed ultrices metus ut eros interdum, vel blandit mi lacinia.',
-          grade: '50'
+          grade: 50,
+          total: 100
+        },
+        {
+          title: 'title 1',
+          link: 'https://www.google.com',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida tincidunt tellus, vel vehicula turpis euismod a. Nulla lobortis mi nec sagittis hendrerit. Sed ultrices metus ut eros interdum, vel blandit mi lacinia.',
+          grade: 75,
+          total: 100
         }
       ]
     },
@@ -30,12 +38,13 @@ const reset = async () => {
       email: 'admin.user@test.com',
       password: bcrypt.hashSync('password', 10),
       admin: true,
-      posts: [
+      assignments: [
         {
           title: 'title 1',
           link: 'https://www.google.com',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida tincidunt tellus, vel vehicula turpis euismod a. Nulla lobortis mi nec sagittis hendrerit. Sed ultrices metus ut eros interdum, vel blandit mi lacinia.',
-          grade: ''
+          grade: null,
+          total: 80
         }
       ]
     }

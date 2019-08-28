@@ -9,39 +9,39 @@ router.post('/', isLoggedIn, isSameUser, async (req, res, next) => {
   const query = { _id: userId }
   const user = await User.findOne(query)
 
-  user.posts.push(req.body)
+  user.assignments.push(req.body)
   await user.save()
 
-  const post = user.posts[user.posts.length - 1]
-  res.status(status).json({ status, response: post })
+  const assignment = user.assignments[user.assignments.length - 1]
+  res.status(status).json({ status, response: assignment })
 })
 
-router.put('/:postId', isLoggedIn, isSameUser, async (req, res, next) => {
+router.put('/:assignmentId', isLoggedIn, isSameUser, async (req, res, next) => {
   const status = 200
 
-  const { postId, userId } = req.params
+  const { assignmentId, userId } = req.params
   const query = { _id: userId }
   const user = await User.findOne(query)
-  const post = user.posts.id(postId)
+  const assignment = user.assignments.id(assignmentId)
 
   const { title, link, description, grade } = req.body
-  post.title = title
-  post.link = link
-  post.description = description
-  post.grade = grade
+  assignment.title = title
+  assignment.link = link
+  assignment.description = description
+  assignment.grade = grade
   await user.save()
 
-  res.status(status).json({ status, response: post })
+  res.status(status).json({ status, response: assignment })
 })
 
-router.delete('/:postId', isLoggedIn, isSameUser, async (req, res, next) => {
+router.delete('/:assignmentId', isLoggedIn, isSameUser, async (req, res, next) => {
   const status = 200
 
-  const { postId, userId } = req.params
+  const { assignmentId, userId } = req.params
   const query = { _id: userId }
   const user = await User.findOne(query)
 
-  user.posts = user.posts.filter(post => post.id !== postId)
+  user.assignments = user.assignments.filter(assignment => assignment.id !== assignmentId)
   await user.save()
 
   res.json({ status, response: user })
@@ -49,11 +49,11 @@ router.delete('/:postId', isLoggedIn, isSameUser, async (req, res, next) => {
 
 module.exports = router
 
-// GET all posts
+// GET all assignments
 router.get('/', async (req, res, next) => {
   const status = 200
   try {
-    const users = await User.find().select('posts')
+    const users = await User.find().select('assignments')
     console.log(users)
     // let companies
     // if (req.query.name) {

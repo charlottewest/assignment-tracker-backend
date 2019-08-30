@@ -66,7 +66,7 @@ const reset = async () => {
           title: 'Assignment 1',
           link: 'https://www.google.com',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida tincidunt tellus, vel vehicula turpis euismod a. Nulla lobortis mi nec sagittis hendrerit. Sed ultrices metus ut eros interdum, vel blandit mi lacinia.',
-          grade: 50,
+          grade: null,
           total: 100
         },
         {
@@ -112,7 +112,7 @@ const reset = async () => {
           title: 'Assignment 1',
           link: 'https://www.google.com',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida tincidunt tellus, vel vehicula turpis euismod a. Nulla lobortis mi nec sagittis hendrerit. Sed ultrices metus ut eros interdum, vel blandit mi lacinia.',
-          grade: 50,
+          grade: null,
           total: 100
         },
         {
@@ -142,7 +142,7 @@ const reset = async () => {
           title: 'Assignment 2',
           link: 'https://www.google.com',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida tincidunt tellus, vel vehicula turpis euismod a. Nulla lobortis mi nec sagittis hendrerit. Sed ultrices metus ut eros interdum, vel blandit mi lacinia.',
-          grade: 75,
+          grade: null,
           total: 100
         }
       ]
@@ -158,7 +158,7 @@ const reset = async () => {
           title: 'Assignment 1',
           link: 'https://www.google.com',
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida tincidunt tellus, vel vehicula turpis euismod a. Nulla lobortis mi nec sagittis hendrerit. Sed ultrices metus ut eros interdum, vel blandit mi lacinia.',
-          grade: 50,
+          grade: null,
           total: 100
         },
         {

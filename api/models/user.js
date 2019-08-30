@@ -6,11 +6,13 @@ const schema = mongoose.Schema({
   lastname: String,
   email: {
     type: String,
-    required: true
+    required: true,
+    match: /^\w+@\w+\.[a-z]*$/
   },
   password: {
     type: String,
-    required: true
+    required: true,
+    minlength: 8
   },
   admin: {
     type: Boolean,

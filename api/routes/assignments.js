@@ -16,7 +16,7 @@ router.post('/', isLoggedIn, isSameUser, async (req, res, next) => {
   res.status(status).json({ status, response: assignment })
 })
 
-router.put('/:assignmentId', isLoggedIn, isSameUser, async (req, res, next) => {
+router.put('/:assignmentId', isLoggedIn, async (req, res, next) => {
   const status = 200
 
   const { assignmentId, userId } = req.params
@@ -54,23 +54,6 @@ router.get('/', async (req, res, next) => {
   const status = 200
   try {
     const users = await User.find().select('assignments')
-    console.log(users)
-    // let companies
-    // if (req.query.name) {
-    //   companies = units.filter(unit =>
-    //     unit.company.name.toLowerCase().includes(req.query.name.toLowerCase())
-    //   )
-    // } else if (req.query.employees_lte) {
-    //   companies = units.filter(unit =>
-    //     unit.company.employees.length <= parseInt(req.query.employees_lte)
-    //   )
-    // } else if (req.query.employees_gte) {
-    //   companies = units.filter(unit =>
-    //     unit.company.employees.length >= parseInt(req.query.employees_gte)
-    //   )
-    // } else {
-    //   companies = units
-    // }
 
     res.json({ status, users })
   } catch (error) {
